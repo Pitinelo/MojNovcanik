@@ -10,10 +10,28 @@ public class TestRegistracija {
         
         Login l = new Login();
 
-        r.kreirajUsera();
-        r.kreirajUsera();
+        User u = new User();
 
-        User u = l.ulogovaniKorisnik(r.getRegistrovaniKorisnici());
+        boolean lIR = true;
+        while (lIR){
+            System.out.println(GlavniMeni.ispisLoginaIRegistracije());
+            int opcija = sc.nextInt();
+
+            switch (opcija){
+                case 1:
+                    r.kreirajUsera();
+                    break;
+                case 2:
+                    u = l.ulogovaniKorisnik(r.getRegistrovaniKorisnici());
+                    lIR = false;
+                    break;
+                case 0:
+                    System.out.println("Uspesno ste izasli iz programa.");
+                    System.exit(0);
+            }
+        }
+
+
 
         Racun rc2 = new Racun(u);
         boolean vrti = true;

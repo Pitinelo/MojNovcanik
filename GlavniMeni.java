@@ -14,4 +14,15 @@ public class GlavniMeni {
 
         return sb.toString();
     }
+
+    public static String ispisLoginaIRegistracije (){
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("Dobrodoslu u Pejic banku.").append(" Izaberite opciju: ").append("\n");
+        sb.append("1.Registracija korisnika: ").append("\n");
+        sb.append("2.Login korisnika: ").append("\n");
+        sb.append("0.Izlaz iz aplikacije.");
+
+        return sb.toString();
+    }
 }
